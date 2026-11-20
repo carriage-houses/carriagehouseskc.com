@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Keep Jekyll and other Ruby gems up to date
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+
+  # Keep GitHub Actions up to date (if workflows are added later)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
